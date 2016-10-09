@@ -2,7 +2,7 @@
 
 An introduction to the project is given in the README.
 
-pydelicious is released under the FreeBSD License. 
+pydelicious is released under the FreeBSD License.
 See license.txt for details and the copyright holders.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
@@ -53,13 +53,13 @@ except ImportError:
 # pydoc and distutils supported exports
 __version__ = '0.6'
 __author__ = "Berend (.mpe)"
-__author_email__ = "dev,pydelicious@dotmpe.com"
+__author_email__ = "dev+pydelicious@dotmpe.com"
 #__date__ = "$Date$"[]
 __credits__ = """Frank Timmermann (original author), and in no
 particular order: Greg Pinero, me.gooz, mohangk, stumble.then.rise, clupprich"""
 __license__ = 'FreeBSD'
 __rcs_id__ = "$Id$"[3:-1]
-__url__ = 'http://code.google.com/p/pydelicious/'
+__url__ = 'https://github.com/dotmpe/python-delicious'
 __docformat__ = "restructuredtext en"
 __description__ = "Access delicious.com API's with Python"
 __long_description__ = "A complete Python interface to del.icio.us Bookmarks' HTTP API's."
@@ -601,7 +601,7 @@ def dlcs_feed(name_or_url, url_map=delicious_v2_feeds, count=15, **kwds):
 
     #if fancy == True:
     #    '?fancy'
-    #elif fancy != None:        
+    #elif fancy != None:
     #    '?plain'
     format = kwds.setdefault('format', 'json')
     kwds.setdefault('count', count)
@@ -639,7 +639,7 @@ class DeliciousAPI:
 
     Methods ``request`` and ``request_raw`` represent the core. For all API
     paths there are furthermore methods (e.g. posts_add for 'posts/all') with
-    an explicit declaration of parameters and documentation. 
+    an explicit declaration of parameters and documentation.
     """
 
     def __init__(self, user, passwd, codec=PREFERRED_ENCODING,
@@ -657,7 +657,7 @@ class DeliciousAPI:
         request and parse a resource. See ``dlcs_api_request()`` and
         ``dlcs_parse_xml()``.
 
-        Parameter ``build_opener`` is a callable that, provided with the 
+        Parameter ``build_opener`` is a callable that, provided with the
         credentials, should build a urllib2 opener for the delicious API server
         with HTTP authentication. See ``dlcs_api_opener()`` for the default
         implementation.
@@ -1066,32 +1066,32 @@ def user_posts(user=None, tag=None, key=None, **params):
         path = 'user_private'
     else:
         path = 'user'
-    return dlcs_feed(path, user=user, tag=tag, key=key, **params)    	
+    return dlcs_feed(path, user=user, tag=tag, key=key, **params)
 
 
 def json_tags(user, atleast, count, sort='alpha', raw=True, callback=None):
     """
     user
-    atleast=###         include only tags for which there are at least ### 
+    atleast=###         include only tags for which there are at least ###
                         number of posts.
     count=###           include ### tags, counting down from the top.
-    sort={alpha|count}  construct the object with tags in alphabetic order 
+    sort={alpha|count}  construct the object with tags in alphabetic order
                         (alpha), or by count of posts (count).
     callback=NAME       wrap the object definition in a function call NAME(...),
                         thus invoking that function when the feed is executed.
-    raw                 a pure JSON object is returned, instead of code that 
+    raw                 a pure JSON object is returned, instead of code that
                         will construct an object named Delicious.tags.
     """
     url = 'http://del.icio.us/feeds/json/tags/' + \
             dlcs_encode_params({0:user})[0]
-    return dlcs_feed(url, atleast=atleast, count=count, sort=sort, raw=raw, 
+    return dlcs_feed(url, atleast=atleast, count=count, sort=sort, raw=raw,
             callback=callback)
 
 
 def json_network(user, raw=True, callback=None):
     """
     callback=NAME       wrap the object definition in a function call NAME(...)
-    ?raw                a raw JSON object is returned, instead of an object named 
+    ?raw                a raw JSON object is returned, instead of an object named
                         Delicious.posts
     """
     url = 'http://del.icio.us/feeds/json/network/' + \
@@ -1102,7 +1102,7 @@ def json_network(user, raw=True, callback=None):
 def json_fans(user, raw=True, callback=None):
     """
     callback=NAME       wrap the object definition in a function call NAME(...)
-    ?raw                a pure JSON object is returned, instead of an object named 
+    ?raw                a pure JSON object is returned, instead of an object named
                         Delicious.
     """
     url = 'http://del.icio.us/feeds/json/fans/' + \
