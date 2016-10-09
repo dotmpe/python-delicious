@@ -6,6 +6,8 @@
   Merged with automatic export of old Google Code repo. Maybe look if there is
   a new API up. But for now need access to XML parsing routines.
 
+  See ReadMe-old.rst
+
 - old code at http:code.google.com/p/pydelicious/
 
 
