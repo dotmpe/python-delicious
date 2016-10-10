@@ -1,4 +1,4 @@
-:Version: 0.6.1
+:Version: 0.6.2-dev
 :Created: 2006-09-20
 :Updated: 2016-10-10
 

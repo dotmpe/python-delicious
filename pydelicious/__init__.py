@@ -51,7 +51,7 @@ except ImportError:
 ### Static config
 
 # pydoc and distutils supported exports
-__version__ = '0.6.1'
+__version__ = '0.6.2-dev'
 __author__ = "Berend (.mpe)"
 __author_email__ = "dev+pydelicious@dotmpe.com"
 #__date__ = "$Date$"[]

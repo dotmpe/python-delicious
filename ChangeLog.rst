@@ -34,3 +34,6 @@
   - Installable package for the Google Code SVN export (master), registered with
     PyPi.
 
+(0.6.2)
+  ..
+
