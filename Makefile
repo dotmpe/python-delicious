@@ -58,6 +58,18 @@ install:
 	python setup.py install
 	python setup.py clean
 
+register-test:
+	python setup.py register -r pypitest
+
+upload-test:
+	python setup.py sdist upload -r pypitest
+
+register:
+	python setup.py register -r pypi
+
+upload:
+	python setup.py sdist upload -r pypi
+
 clean: clean-setup clean-pyc 
 	@rm -rf $(CLN)
 
