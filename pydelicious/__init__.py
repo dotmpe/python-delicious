@@ -51,7 +51,7 @@ except ImportError:
 ### Static config
 
 # pydoc and distutils supported exports
-__version__ = '0.6'
+__version__ = '0.6.1'
 __author__ = "Berend (.mpe)"
 __author_email__ = "dev+pydelicious@dotmpe.com"
 #__date__ = "$Date$"[]
@@ -61,8 +61,8 @@ __license__ = 'FreeBSD'
 __rcs_id__ = "$Id$"[3:-1]
 __url__ = 'https://github.com/dotmpe/python-delicious'
 __docformat__ = "restructuredtext en"
-__description__ = "Access delicious.com API's with Python"
-__long_description__ = "A complete Python interface to del.icio.us Bookmarks' HTTP API's."
+__description__ = "See Github. Was: Access delicious.com API's with Python"
+__long_description__ = "Was a complete Python interface to del.icio.us Bookmarks' HTTP API's."
 
 
 DLCS_OK_MESSAGES = ('done', 'ok')

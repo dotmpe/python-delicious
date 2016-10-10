@@ -26,6 +26,11 @@
     make install now installs tools also
 
 0.6
-    HTTP(S)_PROXY for https too
-	merge setup_tools into setup, dlcs for command line del.icio.us now available
+  HTTP(S)_PROXY for https too
+  merge setup_tools into setup, dlcs for command line del.icio.us now available
+
+0.6.1
+  - Changed back to semver compatible version.
+  - Installable package for the Google Code SVN export (master), registered with
+    PyPi.
 
